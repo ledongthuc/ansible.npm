@@ -1,14 +1,10 @@
 ---
-- hosts: localhost 
-  remote_user: root
-
-  var:
-    packages:
-      - global: false
-        name: coffee-script
-        version: 1.6.1
-      - global: false
-        path: ./
-
+- hosts: all 
   roles:
-    - npm
+  - role: ledongthuc.ansible.npm
+    packages:
+    - global: false
+      name: coffee-script
+      version: 1.6.1
+    - global: false
+      path: ./
