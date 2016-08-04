@@ -1,7 +1,7 @@
 ---
 - hosts: all 
   roles:
-  - role: ledongthuc.ansible.npm
+  - role: ansible.npm
     packages:
     - global: false
       name: coffee-script
