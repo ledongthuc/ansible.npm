@@ -1,3 +1,4 @@
+dependencies: []
 galaxy_info:
   author: Thuc Le
   description: Install NPM and trigger to install plugins
@@ -25,4 +26,3 @@ galaxy_info:
   - javascript
   - dependencies
   - package manager
-  dependencies: []
