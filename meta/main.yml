@@ -1,0 +1,27 @@
+galaxy_info:
+  author: Thuc Le
+  description: Install NPM and trigger to install plugins
+  company: your company (optional)
+  issue_tracker_url: https://github.com/ledongthuc/ansible.npm/issues
+  license: license (Apache)
+  min_ansible_version: 1.2
+  github_branch: master
+  platforms:
+  - name: Fedora
+    versions:
+    - all
+  - name: MacOSX
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  
+  galaxy_tags:
+  - npm
+  - javascript
+  - dependencies
+  - package manager
