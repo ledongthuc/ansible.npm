@@ -34,4 +34,4 @@ License
 
 Author Information
 ------------------
-  Thuc Le ( ledongthuc[at]gmail.com )
+  Thuc Le - ledongthuc[at]gmail.com
