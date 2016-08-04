@@ -6,14 +6,16 @@ Role Name
 Requirements
 ------------
 
-  Ansible >= 1.2
+  Ansible >= 1.2. 
   Better is linux
 
 Role Variables
 --------------
 
-  packages: list packages that you want to install. It supports from file or package's name. Default is none.
-    
+  | Name          | Default          | Description  |
+  | ------------- |:---------------- |:------------ |
+  | packages      | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
+
   Each item in packages are defined in http://docs.ansible.com/ansible/npm_module.html
   Example:
 
