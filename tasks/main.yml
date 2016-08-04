@@ -1,2 +1,22 @@
 ---
 # tasks file for npm
+- name: Insall npm
+  package:
+    pkg=npm
+    state=latest
+    update_cache=yes
+  become: yes
+  become_user: root
+
+- name: Install dependencies
+  npm:
+    executable: "{{ item.executable|default(omit) }}"
+    global: "{{ item.global|default(true) }}"
+    registry: "{{ item.registry|default(omit) }}"
+    name: "{{ item.name|default(omit) }}"
+    path: "{{ item.path|default(omit) }}"
+    version: "{{ item.version|default(omit) }}"
+    state: "{{ item.state|default(present) }}"
+    production: "{{ item.production|default(omit) }}"
+    ignore_scripts: "{{ item.ignore_scripts|default(omit) }}"
+  with_items: "{{ packages }}"

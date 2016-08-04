@@ -12,8 +12,17 @@ Requirements
 Role Variables
 --------------
 
-  npm_packages: list of packages that you need to install after NPM is installed finished. Default: empty (no install).
-  npm_file: file path of package.json for install after NPM is installed. Default: empty (no install).
+  packages: list packages that you want to install. It supports from file or package's name. Default is none.
+    
+  Each item in packages are defined in http://docs.ansible.com/ansible/npm_module.html
+  Example:
+
+    packages:
+    - global: false
+      name: coffee-script
+      version: 1.6.1
+    - global: false
+      path: ./
 
 Dependencies
 ------------
@@ -23,9 +32,15 @@ Dependencies
 Example Playbook
 ----------------
 
-    - hosts: servers
+    - hosts: all 
       roles:
-         - { role: ledongthuc.ansible.npm, npm: [express,hook.io], npm_file: package.json }
+      - role: ledongthuc.ansible.npm
+        packages:
+        - global: false
+          name: coffee-script
+          version: 1.6.1
+        - global: false
+          path: ./
 
 License
 -------
