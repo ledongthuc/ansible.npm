@@ -5,13 +5,11 @@
     pkg=npm
     state=latest
     update_cache=yes
-  become: yes
-  become_user: root
 
 - name: Install dependencies
   npm:
     executable: "{{ item.executable|default(omit) }}"
-    global: "{{ item.global|default(true) }}"
+    global: "{{ item.global|default(false) }}"
     registry: "{{ item.registry|default(omit) }}"
     name: "{{ item.name|default(omit) }}"
     path: "{{ item.path|default(omit) }}"
