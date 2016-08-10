@@ -38,7 +38,7 @@ Example Playbook
 
     - hosts: all 
       roles:
-      - role: ledongthuc.ansible.npm
+      - role: ledongthuc.npm
         packages:
         - global: false
           name: coffee-script
