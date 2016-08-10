@@ -19,14 +19,28 @@ Role Variables
   | packages      | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
 
   Each item in packages are defined in http://docs.ansible.com/ansible/npm_module.html
-  Example:
+
+  Example installation stanalone package:
+  
+    packages:
+    - name: coffee-script
+      global: false
+      version: 1.6.1
+      path: /srv/my-website
+
+  Example installation from package.json
 
     packages:
-    - global: false
-      name: coffee-script
+    - path: /srv/my-website
+      global: false
+
+  Example global installation
+
+    packages:
+    - name: coffee-script
+      global: true 
       version: 1.6.1
-    - global: false
-      path: ./
+      path: /srv/my-website
 
 Dependencies
 ------------
@@ -43,8 +57,9 @@ Example Playbook
         - global: false
           name: coffee-script
           version: 1.6.1
+          path: /srv/my-website
         - global: false
-          path: ./
+          path: /srv/my-website
 
 License
 -------
