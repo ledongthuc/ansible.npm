@@ -1,7 +1,7 @@
 ---
 - hosts: all 
   vars:
-    packages:
+    npm_packages:
     - global: false
       name: coffee-script
       version: 1.6.1

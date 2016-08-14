@@ -16,13 +16,13 @@ Role Variables
 
   | Name          | Default          | Description  |
   | ------------- |:---------------- |:------------ |
-  | packages      | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
+  | npm_packages  | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
 
   Each item in packages are defined in http://docs.ansible.com/ansible/npm_module.html
 
   Example installation stanalone package:
   
-    packages:
+    npm_packages:
     - name: coffee-script
       global: false
       version: 1.6.1
@@ -30,13 +30,13 @@ Role Variables
 
   Example installation from package.json
 
-    packages:
+    npm_packages:
     - path: /srv/my-website
       global: false
 
   Example global installation
 
-    packages:
+    npm_packages:
     - name: coffee-script
       global: true 
       version: 1.6.1
@@ -53,7 +53,7 @@ Example Playbook
     - hosts: all 
       roles:
       - role: ledongthuc.npm
-        packages:
+        npm_packages:
         - global: false
           name: coffee-script
           version: 1.6.1

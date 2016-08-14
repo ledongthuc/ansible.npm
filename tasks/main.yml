@@ -17,4 +17,4 @@
     state: "{{ item.state|default(omit) }}"
     production: "{{ item.production|default(omit) }}"
     ignore_scripts: "{{ item.ignore_scripts|default(omit) }}"
-  with_items: "{{ packages }}"
+  with_items: "{{ npm_packages }}"
