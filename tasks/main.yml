@@ -17,5 +17,4 @@
     state: "{{ item.state|default(omit) }}"
     production: "{{ item.production|default(omit) }}"
     ignore_scripts: "{{ item.ignore_scripts|default(omit) }}"
-    debug: msg="Installed {{ item.name|default('N/A')  }} successfully at PATH: {{ item.path|default('N/A') }}"
   with_items: "{{ packages }}"
