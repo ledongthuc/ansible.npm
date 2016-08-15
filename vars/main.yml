@@ -1,2 +1,3 @@
 ---
-# vars file for npm
+old_node_path: /usr/bin/nodejs
+new_node_path: /usr/bin/node

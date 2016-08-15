@@ -5,6 +5,9 @@
     state=latest
     update_cache=yes
 
+- name: Create a nodejs binary with new node binary
+  file: src={{ old_node_path   }} dest={{ new_node_path  }} state=link
+
 - name: Install dependencies
   npm:
     executable: "{{ item.executable|default(omit) }}"
