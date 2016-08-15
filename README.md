@@ -14,9 +14,9 @@ Requirements
 Role Variables
 --------------
 
-  | Name          | Default          | Description  |
-  | ------------- |:---------------- |:------------ |
-  | npm_packages  | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
+| Name          | Default          | Description  |
+| ------------- |:---------------- |:------------ |
+| npm_packages  | [] (empty list)  | List packages that you want to install. It supports from file or package's name |
 
   Each item in packages are defined in http://docs.ansible.com/ansible/npm_module.html
 
